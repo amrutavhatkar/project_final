@@ -1,0 +1,44 @@
+<!-- <div  class="panel panel-primary">
+    <div  class="panel-heading">
+      <h2>Pizzas List</h2>
+    </div>
+    <div class="panel-body main">
+      <table class="table table-hover table-striped">
+        <thead>
+          <tr>
+            <th>pid</th>
+            <th>p_name</th>
+            <th>p_amount</th>
+            <th>p_image</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pizza of pizzas | async">
+            <td>{{pizza.id}}</td>
+            <td>{{pizza.p_name}}</td>
+            <td>{{pizza.p_amount}}</td>
+            <td><img src="data:image/png;base64,{{pizza.p_image}}"/></td>
+            <td>{{pizza.p_image}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div> -->
+
+  
+<div class="container ">
+  <div class="row">
+      <ng-container *ngFor="let pizza of pizzas | async">
+          <div class="card col-md-3 m-3 border-light" style="width: 18rem;" >
+              <img src="{{pizza.p_image}}" class="card-img-top" alt="..." width="50px" height="150px">
+              <!-- <span width="50px" height="150px"></span> -->
+              <div class="card-body">
+                <h5 class="card-title">{{pizza.p_name}}</h5>
+                <!-- <p class="card-text">{{pizza.description}}</p> -->
+                <p>{{pizza.p_amount}}&nbsp;Rs.</p>
+                <a href="#" class="btn btn-light">Add to Cart</a>
+              </div>
+            </div>
+      </ng-container>
+  </div>
+</div>

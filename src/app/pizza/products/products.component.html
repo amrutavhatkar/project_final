@@ -1,0 +1,43 @@
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a (click)="filter('')">
+                <img src="https://www.dominos.co.in/files/items/Crust_272X272.jpg" alt="">
+                <h6>All Pizzas</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('Veg')">
+                <img src="https://www.dominos.co.in/files/items/Corn_&_Cheese.jpg" alt="">
+                <h6>Veg Pizza</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('Non Veg')">
+                <img src="https://www.dominos.co.in/files/items/Dominator.jpg" alt="">
+                <h6>Non Veg</h6>
+            </a>
+        </div> 
+        <div class="item float-end">
+            <button routerLink="/cart" class="btn btn-dark " style="background-color: #182025; margin-left: 800px; margin-top: 8px;  ">
+                <i style="font-size: 30px;" class="fas fa-shopping-cart "></i>
+                <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+            </button>
+        </div>     
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
+            <div class="card col-md-3">
+                <img src="{{item.image}}" alt="">
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.title}}</h5>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+                <p><strong>Price:</strong> ₹{{item.price}}</p>
+                <button class="btn btn-dark" style="background-color: #182025;" (click)=addtocart(item)>Add to cart</button>
+            </div>
+        </ng-container>
+
+    </div>
+</div>

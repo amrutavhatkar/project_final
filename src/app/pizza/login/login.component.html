@@ -1,0 +1,26 @@
+<div class="container ms-2" style="align-items: center;">
+    <form [formGroup]="loginform" (ngSubmit)="onLogin()">
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Username</label>
+                    <input type="username" formControlName="username" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Username">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Password</label>
+                    <input type="password" formControlName="password" class="form-control" id="exampleFormControlInput1"
+                        placeholder="password">
+                </div>
+                <button class="btn btn-light me-3" type="submit">Login</button>
+            </div>
+        </div>
+    </form>
+    <div class= "container" *ngIf= "success" >
+        <div class ="container text-center" style="color:red;border: 1px solid red;">
+            <b>Username or password is incorrect</b>
+
+        </div>
+        
+    </div>
+</div>

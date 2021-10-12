@@ -1,0 +1,16 @@
+.btn-light {
+    color: black;
+    background-color: #fff;
+    border-color: #fff; /*set the color you want here*/
+    border-radius: 0%;
+    
+}
+
+.btn-light:hover, .btn-light:focus, .btn-light:active, .btn-light.active, .open>.dropdown-toggle.btn-light {
+    /* color: black; */
+    color:#fff;
+    background-color: #e66a6a;
+    border-color: #e66a6a; 
+    /* border-color: white;
+    border-bottom:2px solid #e66a6a; */
+}

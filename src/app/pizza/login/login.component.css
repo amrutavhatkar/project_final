@@ -1,0 +1,12 @@
+.btn-light {
+    color: white;
+    background-color: #e66a6a;
+    border-color: #e66a6a; /*set the color you want here*/
+    border-radius: 0%;
+}
+
+.btn-light:hover, .btn-light:focus, .btn-light:active, .btn-light.active, .open>.dropdown-toggle.btn-light {
+    color: #fff;
+    background-color: #e66a6a;
+    border-color: #e66a6a; /*set the color you want here*/
+}
