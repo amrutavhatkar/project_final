@@ -12,7 +12,7 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getProduct(){
-    return this.http.get<any>("https://raw.githubusercontent.com/amrutavhatkar/UI/main/pizaadata.json?token=AOKALX3OLSXS4JECSFLY4RDBMVSNC")
+    return this.http.get<any>("http://localhost:8080/api/pizza-details")
     .pipe(map((res:any)=>{
       return res;
     }))

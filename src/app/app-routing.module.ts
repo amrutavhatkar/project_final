@@ -11,7 +11,8 @@ const routes: Routes = [
 {path:'', component:SliderComponent},
 {path:"pizza-details",component:ProductsComponent},
 {path:'login', component: LoginComponent},
-{path:'signup', component: SignupComponent},  
+{path:'signup', component: SignupComponent}, 
+{path:'cart', component:CartComponent} 
 ];
 
 @NgModule({
